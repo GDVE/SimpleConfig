@@ -1,6 +1,7 @@
 package ru.simplecode.config;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.NoArgsConstructor;
 import ru.simplecode.util.JsonUtils;
@@ -12,6 +13,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class SimpleConfig {
 
     @JsonIgnore
